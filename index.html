@@ -1,0 +1,1057 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090607">
+<meta name="description" content="დემეს გულწრფელი წერილი ნინის — სიტყვები, რომლებიც გულიდან მოდის.">
+<title>SORRY, MY LOVE — დემე × ნინი</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+Georgian:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #090607;
+  --wine: #4b101f;
+  --wine-light: #741d31;
+  --gold: #c9a66b;
+  --gold-soft: #ead5a8;
+  --text: #f1e6df;
+  --muted: #a99a96;
+  --line: rgba(201,166,107,.23);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(89,15,36,.23), transparent 42%),
+    var(--bg);
+  font-family: "Noto Serif Georgian", serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.19'/%3E%3C/svg%3E");
+}
+
+button, textarea, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+
+::selection { background: #64182c; color: #fff; }
+
+.ambient {
+  position: fixed;
+  inset: auto -20% -35% -20%;
+  height: 70vh;
+  background: radial-gradient(ellipse, rgba(99,16,39,.16), transparent 67%);
+  pointer-events: none;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 26px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.brand {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+
+.top-date {
+  font-size: 9px;
+  color: #a9948b;
+  letter-spacing: 2px;
+}
+
+.hero {
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 22px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: min(90vw, 680px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(201,166,107,.09);
+  box-shadow:
+    0 0 0 35px rgba(201,166,107,.018),
+    0 0 0 85px rgba(201,166,107,.012);
+  animation: breathe 8s ease-in-out infinite;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  animation: rise 1.3s ease both;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+  line-height: 2;
+  margin-bottom: 29px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 11vw, 100px);
+  line-height: .91;
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.hero h1 em {
+  display: block;
+  color: var(--gold);
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.hero-sub {
+  margin: 32px auto 0;
+  max-width: 430px;
+  color: #b7a5a0;
+  font-size: 12px;
+  line-height: 2.3;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 29px 0;
+  color: var(--gold);
+}
+
+.ornament::before, .ornament::after {
+  content: "";
+  width: 46px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.ornament::after { transform: rotate(180deg); }
+
+.gold-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  min-height: 51px;
+  padding: 0 28px;
+  border: 1px solid rgba(201,166,107,.65);
+  background: linear-gradient(120deg, rgba(90,19,38,.82), rgba(34,11,18,.92));
+  color: var(--gold-soft);
+  font-size: 11px;
+  letter-spacing: .4px;
+  cursor: pointer;
+  transition: background .35s, border-color .35s, transform .35s;
+}
+
+.gold-button:hover {
+  background: #531426;
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.gold-button:focus-visible,
+.answer-btn:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #7c6c68;
+  font-size: 9px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.scroll-hint span {
+  display: block;
+  margin-top: 12px;
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(var(--gold), transparent);
+  margin-inline: auto;
+  animation: drop 2s infinite;
+}
+
+.section {
+  padding: 110px 22px;
+  position: relative;
+}
+
+.section-inner {
+  max-width: 720px;
+  margin: auto;
+}
+
+.section-label {
+  text-align: center;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-bottom: 23px;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(36px, 7vw, 60px);
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2.1;
+  max-width: 450px;
+  margin: 0 auto 45px;
+}
+
+.envelope-scene {
+  max-width: 390px;
+  margin: 42px auto 0;
+  perspective: 1000px;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.48;
+  cursor: pointer;
+  background: #2c0c16;
+  border: 1px solid rgba(201,166,107,.45);
+  box-shadow: 0 25px 80px rgba(0,0,0,.45);
+  transition: transform .6s;
+  isolation: isolate;
+}
+
+.envelope:hover { transform: translateY(-5px); }
+
+.env-back {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #401020, #200b12);
+  z-index: -1;
+}
+
+.env-letter {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 7%;
+  height: 80%;
+  background: #eadbc1;
+  color: #481727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
+  text-align: center;
+  transition: transform 1s cubic-bezier(.2,.75,.25,1), bottom 1s;
+  z-index: 0;
+  padding: 12px;
+}
+
+.env-letter small {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.env-letter strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(26px, 6vw, 37px);
+  font-weight: 500;
+}
+
+.env-front {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(155deg, #59182a, #2b0b16);
+  clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+  border-bottom: 1px solid rgba(201,166,107,.35);
+  pointer-events: none;
+}
+
+.env-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 57%;
+  background: #651c31;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  transition: transform .65s ease;
+  z-index: 4;
+}
+
+.seal {
+  position: absolute;
+  z-index: 5;
+  width: 55px;
+  height: 55px;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #d7b77c;
+  background: radial-gradient(circle at 30% 25%, #aa4b54, #4b0d1c 65%);
+  color: #e7c68b;
+  display: grid;
+  place-items: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  box-shadow: 0 3px 15px #1c070c;
+  transition: opacity .4s;
+}
+
+.envelope.open .env-flap { transform: rotateX(180deg); z-index: 0; }
+.envelope.open .env-letter { transform: translateY(-48%); z-index: 3; }
+.envelope.open .seal { opacity: 0; pointer-events: none; }
+
+.envelope-hint {
+  text-align: center;
+  color: #9e8982;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-top: 25px;
+}
+
+.letter-wrap {
+  display: none;
+  margin: 55px auto 0;
+  max-width: 620px;
+  animation: rise .9s ease both;
+}
+
+.letter-wrap.visible { display: block; }
+
+.letter-paper {
+  position: relative;
+  padding: clamp(27px, 7vw, 55px);
+  color: #e8d8cb;
+  background:
+    linear-gradient(145deg, rgba(91,20,38,.22), transparent 60%),
+    #140c0f;
+  border: 1px solid rgba(201,166,107,.4);
+  box-shadow: 0 25px 90px rgba(0,0,0,.3);
+}
+
+.letter-paper::before {
+  content: "D × N";
+  position: absolute;
+  right: 19px;
+  top: 15px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(201,166,107,.65);
+}
+
+.letter-date {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.letter-paper h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--gold-soft);
+  margin: 0 0 25px;
+}
+
+.letter-paper p {
+  font-size: 12px;
+  line-height: 2.4;
+  color: #c9b7af;
+  margin: 0 0 20px;
+}
+
+.letter-paper p strong {
+  color: #e5c58d;
+  font-weight: 400;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 37px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 27px;
+}
+
+.letter-actions {
+  text-align: center;
+  margin-top: 33px;
+}
+
+.divider {
+  width: 1px;
+  height: 75px;
+  margin: 0 auto;
+  background: linear-gradient(transparent, var(--gold), transparent);
+}
+
+.reply-section {
+  background: linear-gradient(180deg, transparent, rgba(67,12,28,.17), transparent);
+}
+
+.reply-card {
+  border: 1px solid var(--line);
+  padding: clamp(24px, 6vw, 44px);
+  background: rgba(17,10,13,.65);
+}
+
+.reply-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.reply-card > p {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 2;
+  margin: 0 auto 30px;
+}
+
+.answer-options {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.answer-btn {
+  width: 100%;
+  min-height: 49px;
+  border: 1px solid rgba(201,166,107,.23);
+  color: #cbbab2;
+  background: rgba(255,255,255,.015);
+  padding: 12px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.answer-btn:hover { border-color: var(--gold); }
+.answer-btn.selected {
+  border-color: var(--gold);
+  background: rgba(103,25,46,.36);
+  color: var(--gold-soft);
+}
+
+.field-label {
+  display: block;
+  color: var(--gold);
+  font-size: 10px;
+  margin: 20px 0 10px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 130px;
+  resize: vertical;
+  background: #0b0809;
+  color: var(--text);
+  border: 1px solid rgba(201,166,107,.24);
+  padding: 15px;
+  font-size: 12px;
+  line-height: 2;
+  border-radius: 0;
+}
+
+textarea::placeholder { color: #71605d; }
+
+.reply-submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-status {
+  display: none;
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  color: var(--gold-soft);
+  font-size: 11px;
+  line-height: 2;
+  text-align: center;
+}
+
+.form-status.show { display: block; }
+
+.footer {
+  padding: 45px 20px 35px;
+  text-align: center;
+  border-top: 1px solid rgba(201,166,107,.12);
+}
+
+.footer-mark {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+
+.footer p {
+  color: #7f6d68;
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin: 15px 0 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 11;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: floatUp linear forwards;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(.96); opacity: .65; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+
+@keyframes drop {
+  0%, 100% { transform: scaleY(.65); transform-origin: top; opacity: .4; }
+  50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) scale(.5); opacity: 0; }
+  20% { opacity: .6; }
+  to { transform: translateY(-120px) scale(1.1); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar { padding: 21px 19px; }
+  .brand { font-size: 13px; letter-spacing: 2.5px; }
+  .top-date { font-size: 8px; letter-spacing: 1px; }
+  .hero { padding-inline: 19px; }
+  .hero h1 { letter-spacing: -1px; }
+  .hero-sub { font-size: 11px; }
+  .section { padding: 83px 18px; }
+  .section-title { font-size: 39px; }
+  .envelope-scene { margin-top: 35px; }
+  .letter-paper p { font-size: 11px; line-height: 2.25; }
+  .letter-paper h3 { font-size: 30px; }
+  .reply-card { padding: 23px 17px; }
+  .reply-card h3 { font-size: 31px; }
+  .gold-button { padding-inline: 19px; }
+}
+</style>
+</head>
+
+<body>
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">D × N</div>
+  <div class="top-date">A LETTER FROM THE HEART</div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow">ჩემს ყველაზე ძვირფას ადამიანს</div>
+
+      <h1>
+        I'm sorry,
+        <em>my love.</em>
+      </h1>
+
+      <div class="ornament">✧</div>
+
+      <p class="hero-sub">
+        ზოგჯერ ყველაზე ძნელი სიტყვა სწორედ ის არის,
+        რომელიც გულიდან მოდის.
+        დღეს კი მინდა, რომ ჩემი გული მოგისმენინო.
+      </p>
+
+      <button class="gold-button" id="beginBtn" type="button">
+        წაიკითხე ჩემი წერილი <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+
+    <div class="scroll-hint">
+      A MOMENT JUST FOR YOU
+      <span></span>
+    </div>
+  </section>
+
+  <section class="section" id="letter">
+    <div class="section-inner">
+      <div class="section-label reveal">A LETTER FOR NINI</div>
+
+      <h2 class="section-title reveal">
+        შენთვის,<br>
+        <span style="color:var(--gold);font-style:italic">ნინიკო.</span>
+      </h2>
+
+      <p class="section-intro reveal">
+        ეს წერილი არ არის თავის გამართლება.
+        ეს არის ჩემი მცდელობა, გულწრფელად გითხრა ის,
+        რისი თქმაც შენთვის მინდა.
+      </p>
+
+      <div class="envelope-scene reveal">
+        <div class="envelope" id="envelope"
+             role="button" tabindex="0"
+             aria-label="გახსენი დემეს წერილი"
+             aria-expanded="false">
+          <div class="env-back"></div>
+          <div class="env-letter">
+            <small>TO MY DEAREST</small>
+            <strong>ჩემო ნინი</strong>
+            <small>WITH ALL MY HEART</small>
+          </div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="seal">D</div>
+        </div>
+        <p class="envelope-hint" id="envelopeHint">
+          შეეხე კონვერტს და გახსენი ჩემი წერილი
+        </p>
+      </div>
+
+      <article class="letter-wrap" id="letterWrap">
+        <div class="letter-paper">
+          <div class="letter-date">ჩემი გულიდან — შენს გულამდე</div>
+
+          <h3>ჩემო ნინიკო,</h3>
+
+          <p>
+            არ ვიცი, რამდენად სწორად შევძლებ ყველაფრის თქმას,
+            მაგრამ ერთი რამ ზუსტად ვიცი — <strong>მინდა, რომ გულწრფელად მოგმართო.</strong>
+          </p>
+
+          <p>
+            მაპატიე ის, რამაც გული გატკინა.
+            მაპატიე, თუ ჩემი სიტყვებით ან საქციელით ისეთი
+            გრძნობა დაგიტოვე, რომელსაც არ იმსახურებდი.
+            არ მინდა შენი ემოციები უყურადღებოდ დავტოვო
+            ან თავი ისე მოვაჩვენო, თითქოს არაფერი მომხდარა.
+          </p>
+
+          <p>
+            ვიცი, რომ მხოლოდ სიტყვები ყველაფერს ვერ შეცვლის.
+            ბოდიშის მოხდა დასაწყისია, ხოლო ნდობასა და
+            ურთიერთობაში სითბოს შენარჩუნებას ყურადღება,
+            მოთმინება და რეალური ცვლილება სჭირდება.
+            <strong>მინდა, ჩემი საქციელითაც გაჩვენო, რომ შენი გრძნობები ჩემთვის მნიშვნელოვანია.</strong>
+          </p>
+
+          <p>
+            შენ ჩემთვის ძვირფასი ადამიანი ხარ.
+            არ მინდა, ეს წერილი იმისთვის წაიკითხო,
+            რომ თავი ვალდებულად იგრძნო და მაშინვე მაპატიო.
+            მინდა, იცოდე, რომ მზად ვარ მოგისმინო,
+            გავიგო, რას გრძნობ და პატივი ვცე შენს ემოციებს.
+          </p>
+
+          <p>
+            თუ გული გეტკინა, ამას მნიშვნელობა აქვს.
+            თუ დრო გჭირდება, ამასაც პატივს ვცემ.
+            მინდა, ჩვენს შორის ყველაფერი გულწრფელობით
+            და ურთიერთპატივისცემით იყოს სავსე.
+          </p>
+
+          <p>
+            <strong>ნინი, გულწრფელად გიხდი ბოდიშს.</strong>
+            მადლობა, რომ ამ წერილის წასაკითხად დრო გამოყავი.
+            რაც არ უნდა მიპასუხო, მინდა, იცოდე,
+            რომ შენი მოსმენა ჩემთვის მნიშვნელოვანია.
+          </p>
+
+          <div class="signature">
+            სიყვარულით,<br>
+            დემე.
+          </div>
+        </div>
+
+        <div class="letter-actions">
+          <button class="gold-button" id="replyBtn" type="button">
+            მინდა, შენც გითხრა რაღაც <span>↓</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section reply-section" id="reply">
+    <div class="section-inner">
+      <div class="section-label reveal">YOUR WORDS MATTER</div>
+
+      <h2 class="section-title reveal">
+        ახლა <span style="color:var(--gold);font-style:italic">შენ გისმენ.</span>
+      </h2>
+
+      <p class="section-intro reveal">
+        ნინიკო, თუ გინდა, მომწერე, რას გრძნობ.
+        შეგიძლია გულწრფელად მითხრა ყველაფერი.
+        არ არის საჭირო იჩქარო ან ისეთი პასუხი გასცე,
+        რომლისთვისაც მზად არ ხარ.
+      </p>
+
+      <div class="reply-card reveal">
+        <h3>შენი პასუხი</h3>
+        <p>ეს სივრცე შენია, ნინი.</p>
+
+        <form id="replyForm"
+              action="https://formspree.io/f/xwlpwawv"
+              method="POST">
+
+          <input type="hidden" name="_subject"
+                 value="ნინის პასუხი — SORRY, MY LOVE">
+
+          <input type="hidden" name="ვინ"
+                 value="ნინი">
+
+          <input type="hidden" name="ვისგან"
+                 value="დემე">
+
+          <input type="hidden" name="არჩეული პასუხი"
+                 id="selectedAnswer" value="">
+
+          <div class="answer-options" id="answerOptions">
+            <button type="button" class="answer-btn"
+                    data-answer="მადლობა, რომ გულწრფელად მომწერე.">
+              მადლობა, რომ გულწრფელად მომწერე.
+            </button>
+
+            <button type="button" class="answer-btn"
+                    data-answer="მინდა, მშვიდად ვისაუბროთ.">
+              მინდა, მშვიდად ვისაუბროთ.
+            </button>
+
+            <button type="button" class="answer-btn"
+                    data-answer="ჯერ ცოტა დრო მჭირდება.">
+              ჯერ ცოტა დრო მჭირდება.
+            </button>
+
+            <button type="button" class="answer-btn"
+                    data-answer="მინდა, ჩემი გრძნობებიც მოგიყვე.">
+              მინდა, ჩემი გრძნობებიც მოგიყვე.
+            </button>
+          </div>
+
+          <label class="field-label" for="message">
+            შენი სიტყვები — თუ გინდა, მომწერე
+          </label>
+
+          <textarea id="message" name="ნინის წერილი"
+                    placeholder="დემე, მინდა გითხრა..."
+                    maxlength="3000"></textarea>
+
+          <button class="gold-button reply-submit"
+                  id="submitBtn" type="submit">
+            პასუხის გამოგზავნა <span>↗</span>
+          </button>
+
+          <div class="form-status" id="formStatus"
+               role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-mark">D × N</div>
+  <p>შექმნილია გულწრფელი სიტყვებით.</p>
+  <p>დემე × ნინი</p>
+</footer>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = (selector) => document.querySelector(selector);
+
+  const beginBtn = $("#beginBtn");
+  const letterSection = $("#letter");
+  const envelope = $("#envelope");
+  const envelopeHint = $("#envelopeHint");
+  const letterWrap = $("#letterWrap");
+  const replyBtn = $("#replyBtn");
+  const replySection = $("#reply");
+  const answerOptions = $("#answerOptions");
+  const selectedAnswer = $("#selectedAnswer");
+  const form = $("#replyForm");
+  const submitBtn = $("#submitBtn");
+  const formStatus = $("#formStatus");
+
+  let isOpen = false;
+  let isSending = false;
+
+  function scrollToElement(element) {
+    element.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "start"
+    });
+  }
+
+  beginBtn.addEventListener("click", () => {
+    scrollToElement(letterSection);
+  });
+
+  function openEnvelope() {
+    if (isOpen) return;
+
+    isOpen = true;
+    envelope.classList.add("open");
+    envelope.setAttribute("aria-expanded", "true");
+    envelopeHint.textContent = "შენი წერილი იხსნება...";
+
+    window.setTimeout(() => {
+      letterWrap.classList.add("visible");
+      envelopeHint.textContent = "ეს წერილი გულით დავწერე.";
+
+      window.setTimeout(() => {
+        scrollToElement(letterWrap);
+      }, 200);
+    }, 850);
+  }
+
+  envelope.addEventListener("click", openEnvelope);
+
+  envelope.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openEnvelope();
+    }
+  });
+
+  replyBtn.addEventListener("click", () => {
+    scrollToElement(replySection);
+  });
+
+  answerOptions.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-answer]");
+    if (!button) return;
+
+    answerOptions.querySelectorAll(".answer-btn").forEach((item) => {
+      item.classList.remove("selected");
+      item.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("selected");
+    button.setAttribute("aria-pressed", "true");
+    selectedAnswer.value = button.dataset.answer;
+  });
+
+  answerOptions.querySelectorAll(".answer-btn").forEach((button) => {
+    button.setAttribute("aria-pressed", "false");
+  });
+
+  function showStatus(message) {
+    formStatus.textContent = message;
+    formStatus.classList.add("show");
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (isSending) return;
+
+    const message = $("#message").value.trim();
+    const answer = selectedAnswer.value.trim();
+
+    if (!message && !answer) {
+      showStatus("გთხოვ, აირჩიე პასუხი ან დაწერე რამდენიმე სიტყვა.");
+      return;
+    }
+
+    isSending = true;
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = ".65";
+    submitBtn.innerHTML = "იგზავნება...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("გაგზავნა ვერ მოხერხდა.");
+      }
+
+      form.reset();
+      selectedAnswer.value = "";
+
+      answerOptions.querySelectorAll(".answer-btn").forEach((button) => {
+        button.classList.remove("selected");
+        button.setAttribute("aria-pressed", "false");
+      });
+
+      showStatus("შენი პასუხი წარმატებით გაიგზავნა. მადლობა გულწრფელობისთვის, ნინი. ❤️");
+      submitBtn.innerHTML = "პასუხი გაიგზავნა ✓";
+    } catch (error) {
+      showStatus(
+        "პასუხის გაგზავნა ვერ დადასტურდა. შეამოწმე ინტერნეტი და Formspree-ის კონფიგურაცია, შემდეგ სცადე ხელახლა."
+      );
+    } finally {
+      isSending = false;
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = "1";
+
+      if (submitBtn.textContent.includes("იგზავნება")) {
+        submitBtn.innerHTML = "პასუხის გამოგზავნა <span>↗</span>";
+      } else if (!submitBtn.textContent.includes("გაიგზავნა")) {
+        submitBtn.innerHTML = "პასუხის გამოგზავნა <span>↗</span>";
+      }
+    }
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach((element) => observer.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add("in-view"));
+  }
+
+  // მცირე ოქროსფერი ნაწილაკები — დამატებითი ბიბლიოთეკის გარეშე.
+  // მობილურზე ანიმაცია შეზღუდულია წარმადობის შესანარჩუნებლად.
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const maxParticles = window.innerWidth < 600 ? 10 : 20;
+
+    function createParticle() {
+      if (document.hidden) return;
+
+      const particle = document.createElement("span");
+      particle.className = "particle";
+      particle.style.left = (Math.random() * 100) + "vw";
+      particle.style.bottom = (Math.random() * 12) + "vh";
+      particle.style.opacity = String(.2 + Math.random() * .45);
+      particle.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+      document.body.appendChild(particle);
+
+      window.setTimeout(() => particle.remove(), 9500);
+    }
+
+    let activeParticles = 0;
+
+    const particleTimer = window.setInterval(() => {
+      if (activeParticles >= maxParticles || document.hidden) return;
+
+      activeParticles++;
+      createParticle();
+
+      window.setTimeout(() => {
+        activeParticles = Math.max(0, activeParticles - 1);
+      }, 9500);
+    }, 950);
+  }
+})();
+</script>
+</body>
+</html>
